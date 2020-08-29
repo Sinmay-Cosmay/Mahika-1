@@ -375,7 +375,7 @@ a.join_bt {
 
 a.join_bt:hover,
 a.join_bt:focus {
-	background: #222;
+	background: #ffbf0e;
 	color: #fff !important;
 }
 

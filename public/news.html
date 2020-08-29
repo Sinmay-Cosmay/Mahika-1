@@ -56,14 +56,15 @@
                 src: url('fonts/My Happy Ending - TTF.ttf');
             }
             #flow{
-                padding-top:65px;
+                position:absolute;
                 width:100%;
+                bottom:-112px;
                 
                 
             }
             .work{
                 padding:10px;
-                width:33%;
+                width:33.33333%;
                 font-family: 'blog';
                 background:white;
                 box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
@@ -72,6 +73,7 @@
                 border:none;
                 cursor:pointer;
                 color:#994276;
+                float:left
             }
             .work:hover{
                 color:#ffbf0e;
@@ -167,17 +169,17 @@
                 </div>
             </div>
         </div>
-
+        <div id="flow" align="center">
+            <a href="news.html"> <button class="work active">News</button></a>
+             <a href="blog.html"><button class="work">Blog</button></a>
+             <a href="gallery.html"><button class="work">Gallery</button></a>
+         </div>
 
     </header>
     <!-- End header -->
 
     
-    <div id="flow" align="center">
-        <a href="news.html"> <button class="work active">News</button></a>
-         <a href="blog.html"><button class="work">Blog</button></a>
-         <a href="gallery.html"><button class="work">Gallery</button></a>
-     </div>
+    
  
 
 
@@ -197,7 +199,7 @@
     <!-- End Banner -->
     
    <!-- section -->
-    <div class="section layout_padding" style="background:url('images/Buterflies.png');background-size:120% 100%;">
+    <div class="section layout_padding" style="background:url('images/Buterflies.png');background-size:120% 100%;padding-top:150px;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -391,7 +393,7 @@
                     <div class="row">
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <div class="full">
-                                <h3>About Us</h3>
+                                <a href="about.html"><h3>About Us</h3></a>
                             </div>
                             <div class="full">
                                 <ul class="menu_footer">
@@ -404,7 +406,7 @@
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <div class="full">
-                                <h3>Our Work</h3>
+                                <a href="WorkFlow.html"><h3>Our Work</h3></a>
                             </div>
                             <div class="full">
                                 <ul class="menu_footer">
@@ -417,7 +419,7 @@
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <div class="full">
-                                <h3>Get Involved</h3>
+                                <a href="GetInvolved.html"><h3>Get Involved</h3></a>
                             </div>
                             <div class="full">
                                 <ul class="menu_footer">
@@ -431,7 +433,7 @@
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <div class="full">
-                                <h3>Media Centre</h3>
+                                <a href="news.html"><h3>Media Centre</h3></a>
                             </div>
                             <div class="full">
                                 <ul class="menu_footer">
@@ -457,7 +459,7 @@
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <div class="full">
                                 <div class="footer_blog full white_fonts">
-                                    <h3>Contact Us</h3>
+                                    <h3 style="color:#ffbf0e !important;border-bottom:none;">Contact Us</h3>
 
                                     <div class="newsletter_form">
                                         <form action="index.html">
@@ -473,12 +475,12 @@
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <div class="full">
-                                <h3>Address</h3>
+                                <h3 style="border-bottom:none;">Address</h3>
                             </div>
                             <div class="full">
                                 <ul class="menu_footer">
                                     <li>
-                                        <p style="color:#ffbf0e;font-family:'blog';font-size:16px;">PO Box 9075 Goregaon(E) PO, Mumbai - 400063 INDIA</p></br>
+                                        <p style="color:#ffbf0e !important;font-family:'blog';font-size:16px;">PO Box 9075 Goregaon(E) PO, Mumbai - 400063 INDIA</p></br>
                             
                                     </li>
                                  </ul>
@@ -494,7 +496,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <p class="crp">© Copyrights 2019 design by html.design</p>
+                    <p class="crp">Copyright ©2020 All rights reserved.</p>
                 </div>
             </div>
         </div>

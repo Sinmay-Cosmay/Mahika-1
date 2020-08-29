@@ -123,12 +123,14 @@ body { font-family: sans-serif; }
 }
 
             #flow{
-                padding-top:65px;
+                
                 width:100%;
+                position:absolute;
+                bottom:-112px;
             }
             .work{
                 padding:10px;
-                width:33%;
+                width:33.33333%;
                 font-family: 'blog';
                 background:white;
                 box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
@@ -137,6 +139,7 @@ body { font-family: sans-serif; }
                 border:none;
                 cursor:pointer;
                 color:#994276;
+                float:left;
             }
             .active{
                 background:#ffbf0e;
@@ -401,15 +404,15 @@ body {
             </div>
         </div>
 
-
+        <div id="flow" align="center">
+            <a href="WorkFlow.html"> <button class="work">Work Flow</button></a>
+            <a href="LettersforChange.html"><button class="work active">Letters For Change</button></a>
+            <a href="ImpactfulLetters.html"><button class="work">Impactful Letters</button></a>
+        </div>
     </header>
     <!-- End header -->
 
-    <div id="flow" align="center">
-        <a href="WorkFlow.html"> <button class="work">Work Flow</button></a>
-        <a href="LettersforChange.html"><button class="work active">Letters For Change</button></a>
-        <a href="ImpactfulLetters.html"><button class="work">Impactful Letters</button></a>
-    </div>
+    
 
     <!-- Start Banner -->
     <!--<div class="section inner_page_banner">
@@ -428,7 +431,7 @@ body {
     
 
 <!-- section -->
-<div class="card-carousel" style="background:url('images/letterbutter.png');background-size: cover;padding-top:60px;">
+<div class="card-carousel" style="background:url('images/letterbutter.png');background-size: cover;padding-top:150px;">
     <div class="my-card" id="showletters" style="box-shadow:0 4px 8px 0 rgba(0,0,0,0.3);">
         <h1 style="background:mediumseagreen;font-size:18px;color:white;">Letters</h1>
         Letters Let Us Let Ours
@@ -530,9 +533,9 @@ body {
             </div></br></br></br>
                 <h2 style="font-family:'cheer';color:#994276;float:left;font-size:35px;">Letters</h2>
                        <div style="float:right;">
-                            <a class="join_bt" href="#" style="background:#ffad33;padding:10px 40px 10px 40px;font-family:'blog';font-size:20px;">Themes</a>
-                            <a class="join_bt" href="#" style="background:#ffad33;padding:10px 40px 10px 40px;font-family:'blog';font-size:20px;">Location</a>
-                            <a class="join_bt" href="#" style="background:#ffad33;padding:10px 40px 10px 40px;font-family:'blog';font-size:20px;">Language</a>
+                            <a class="join_bt" href="#" style="background:#ffbf0e;padding:10px 40px 10px 40px;font-family:'blog';font-size:20px;">Themes</a>
+                            <a class="join_bt" href="#" style="background:#ffbf0e;padding:10px 40px 10px 40px;font-family:'blog';font-size:20px;">Location</a>
+                            <a class="join_bt" href="#" style="background:#ffbf0e;padding:10px 40px 10px 40px;font-family:'blog';font-size:20px;">Language</a>
                         </div>
             </div>
         </div>
@@ -786,7 +789,7 @@ body {
                     <div class="row">
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <div class="full">
-                                <h3>About Us</h3>
+                                <a href="about.html"><h3>About Us</h3></a>
                             </div>
                             <div class="full">
                                 <ul class="menu_footer">
@@ -799,7 +802,7 @@ body {
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <div class="full">
-                                <h3>Our Work</h3>
+                                <a href="WorkFlow.html"><h3>Our Work</h3></a>
                             </div>
                             <div class="full">
                                 <ul class="menu_footer">
@@ -812,7 +815,7 @@ body {
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <div class="full">
-                                <h3>Get Involved</h3>
+                                <a href="GetInvolved.html"><h3>Get Involved</h3></a>
                             </div>
                             <div class="full">
                                 <ul class="menu_footer">
@@ -826,7 +829,7 @@ body {
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <div class="full">
-                                <h3>Media Centre</h3>
+                                <a href="news.html"><h3>Media Centre</h3></a>
                             </div>
                             <div class="full">
                                 <ul class="menu_footer">
@@ -852,7 +855,7 @@ body {
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <div class="full">
                                 <div class="footer_blog full white_fonts">
-                                    <h3>Contact Us</h3>
+                                    <h3 style="color:#ffbf0e !important;border-bottom:none;">Contact Us</h3>
 
                                     <div class="newsletter_form">
                                         <form action="index.html">
@@ -868,12 +871,12 @@ body {
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <div class="full">
-                                <h3>Address</h3>
+                                <h3 style="border-bottom:none;">Address</h3>
                             </div>
                             <div class="full">
                                 <ul class="menu_footer">
                                     <li>
-                                        <p style="color:#ffbf0e;font-family:'blog';font-size:16px;">PO Box 9075 Goregaon(E) PO, Mumbai - 400063 INDIA</p></br>
+                                        <p style="color:#ffbf0e !important;font-family:'blog';font-size:16px;">PO Box 9075 Goregaon(E) PO, Mumbai - 400063 INDIA</p></br>
                             
                                     </li>
                                  </ul>
@@ -889,7 +892,7 @@ body {
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <p class="crp">© Copyrights 2019 design by html.design</p>
+                    <p class="crp">Copyright ©2020 All rights reserved.</p>
                 </div>
             </div>
         </div>
