@@ -29,7 +29,10 @@
     <link rel="stylesheet" href="css/responsive.css" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css" />
-
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -101,27 +104,7 @@ body { font-family: sans-serif; }
                 font-family: happy;
                 src: url('fonts/My Happy Ending - TTF.ttf');
             }
-            #searchlong{
-  border-radius:25px;
-  border:1px solid #D23F70;
-  float:left;
-  width:72%;
-  background-image: url("https://icon-library.com/images/search-icon-html/search-icon-html-6.jpg");
-                background-repeat: no-repeat;
-                background-size: 16px 16px;
-                background-position: 10px;
-                padding:5px 10px 5px 30px;
-}
-#upload{
-  color:white;
-  background:#D23F70;
-  BORDER:#D23F70;
-  border-radius:25px;
-  padding:5px 10px 5px 10px;
-  font-size:20px;
-  float:right;
-}
-
+          
             #flow{
                 
                 width:100%;
@@ -160,6 +143,40 @@ body { font-family: sans-serif; }
                 font-family:'blog';
                 color:#050505;
             }
+            #issues,#lang,#city{
+                background:#ffbf0e;
+                color:#fff;
+                border:none;
+                padding:5px 10px;
+                border-radius:25px;
+                width:23%;
+                margin-right:2%;
+                font-size:17px;
+                font-weight:700;
+                cursor: pointer;
+            }
+            #ins{
+                background:#ffbf0e;
+                color:white;
+                width:23%;
+                border:none;
+                border-radius:25px;
+                padding:5px 10px;
+                text-align:center;
+                font-size:17px;
+                font-weight:700;
+            }
+            #ins::placeholder{
+                color:white;
+                text-align:center;
+            }
+            #letterb{
+                padding-left:14%;
+                padding-right:14%;
+                display:none;
+                
+            }
+            
             </style>
 
 
@@ -332,6 +349,7 @@ body {
   text-align: center;
   background-color: #f1f1f1;
 }
+
             </style>
 
 </head>
@@ -430,120 +448,43 @@ body {
     
     
 
-<!-- section -->
-<div class="card-carousel" style="background:url('images/letterbutter.png');background-size: cover;padding-top:150px;">
-    <div class="my-card" id="showletters" style="box-shadow:0 4px 8px 0 rgba(0,0,0,0.3);">
-        <h1 style="background:mediumseagreen;font-size:18px;color:white;">Letters</h1>
-        Letters Let Us Let Ours
-    </div>
-    <div class="my-card" id="showletters" style="box-shadow:0 4px 8px 0 rgba(0,0,0,0.3);">
-        <h1 style="background:mediumseagreen;font-size:18px;color:white;">Letters</h1>
-        Letters Let Us Let Ours
-    </div>
-    <div class="my-card" id="showletters"  style="box-shadow:0 4px 8px 0 rgba(0,0,0,0.3);">
-        <h1 style="background:mediumseagreen;font-size:18px;color:white;">Letters</h1>
-        Letters Let Us Let Ours
-    </div>
-    <div class="my-card" id="showletters" style="box-shadow:0 4px 8px 0 rgba(0,0,0,0.3);">
-        <h1 style="background:mediumseagreen;font-size:18px;color:white;">Letters</h1>
-        Letters Let Us Let Ours
-    </div>
-    <div class="my-card" id="showletters" style="box-shadow:0 4px 8px 0 rgba(0,0,0,0.3);">
-        <h1 style="background:mediumseagreen;font-size:18px;color:white;">Letters</h1>
-        Letters Let Us Let Ours
-    </div>
-    
-    </div>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script> 
-  <script>
-  $num = $('.my-card').length;
-  $even = $num / 2;
-  $odd = ($num + 1) / 2;
-  
-  if ($num % 2 == 0) {
-    $('.my-card:nth-child(' + $even + ')').addClass('active');
-    $('.my-card:nth-child(' + $even + ')').prev().addClass('prev');
-    $('.my-card:nth-child(' + $even + ')').next().addClass('next');
-  } else {
-    $('.my-card:nth-child(' + $odd + ')').addClass('active');
-    $('.my-card:nth-child(' + $odd + ')').prev().addClass('prev');
-    $('.my-card:nth-child(' + $odd + ')').next().addClass('next');
-  }
-  
-  $('.my-card').click(function() {
-    $slide = $('.active').width();
-    console.log($('.active').position().left);
-    
-    if ($(this).hasClass('next')) {
-      $('.card-carousel').stop(false, true).animate({left: '-=' + $slide});
-    } else if ($(this).hasClass('prev')) {
-      $('.card-carousel').stop(false, true).animate({left: '+=' + $slide});
-    }
-    
-    $(this).removeClass('prev next');
-    $(this).siblings().removeClass('prev active next');
-    
-    $(this).addClass('active');
-    $(this).prev().addClass('prev');
-    $(this).next().addClass('next');
-  });
-  
-  
-  // Keyboard nav
-  $('html body').keydown(function(e) {
-    if (e.keyCode == 37) { // left
-      $('.active').prev().trigger('click');
-    }
-    else if (e.keyCode == 39) { // right
-      $('.active').next().trigger('click');
-    }
-  });
-  </script>
-  <script type="text/javascript">
-  
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-36251023-1']);
-    _gaq.push(['_setDomainName', 'jqueryscript.net']);
-    _gaq.push(['_trackPageview']);
-  
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  
-  </script>
-<!-- end section -->
 
-<div class="footer_bottom" style="background:white;">
+
+<div class="footer_bottom" style="background:white;padding-top:100px;">
     <div class="container">
         <div class="row">
             <div class="col-12"></br>
-                <div style="width:100%;">
-                    
-                <input class="input-field" type="text" id="searchlong" placeholder="Search Letters">
-                   
-                
-                    
-                    <a class="join_bt" href="#" style="background:#D23F70;padding:10px 40px 10px 40px;font-family:'blog';font-size:20px;">Upload Letters</a>
-                        
-                    
-                
-            </div></br></br></br>
-                <h2 style="font-family:'cheer';color:#994276;float:left;font-size:35px;">Letters</h2>
-                       <div style="float:right;">
-                            <a class="join_bt" href="#" style="background:#ffbf0e;padding:10px 40px 10px 40px;font-family:'blog';font-size:20px;">Themes</a>
-                            <a class="join_bt" href="#" style="background:#ffbf0e;padding:10px 40px 10px 40px;font-family:'blog';font-size:20px;">Location</a>
-                            <a class="join_bt" href="#" style="background:#ffbf0e;padding:10px 40px 10px 40px;font-family:'blog';font-size:20px;">Language</a>
-                        </div>
+               
+               
             </div>
         </div>
+       
     </div>
 </br></br>
+
 </div>
-                       
+<h2 style="font-family:'cheer';color:#994276;font-size:35px;cursor: pointer;" align="center" id="eife" title="Click for a selected sorting">Letters </h2></br>
+<form id="letterb" class="bletter">
+
+    <button type="button" id="issues">Issues</button>
+    <button type="button" id="lang">Language</button>
+    <button type="button" id="city">City</button>
+    <input type="text" name="institution" id="ins" placeholder="Institution" title="Input an Institution">
+
+</form>
+
+<script>
+$(document).ready(function(){
+$('#eife').on('click',function(){
+                             $('#letterb').toggle();
+                             
+                        });
+ 
+});
+
+</script> 
               
+                
 <!-- end section -->
 <h4 style="font-family:'cheer';color:#000000;padding-left:15%;font-size:25px;">Section</h4>
 </br>
@@ -796,7 +737,7 @@ body {
                                     <li><a href="about.html#OurFounder">> Meet the Founder</a></li>
                                     <li><a href="about.html#OurTeam">> Meet the Team</a></li>
                                     <li><a href="about.html#InitialContributors">> Meet the Initial Contributors</a></li>
-                                
+                                    <li><a href="about.html#StarContributors">> Star Contributors</a></li>
                                </ul>
                             </div>
                         </div>
